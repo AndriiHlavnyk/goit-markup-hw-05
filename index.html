@@ -27,9 +27,17 @@
             ><span class="web">Web</span>Studio</a
           >
           <ul class="list li-one">
-            <li><a class="link current" href="./index.html">Studio</a></li>
-            <li><a class="link" href="./portfolio.html">Portfolio</a></li>
-            <li><a class="link" href="">Contacts</a></li>
+            <li>
+              <a class="link current link-line-anim" href="./index.html"
+                >Studio</a
+              >
+            </li>
+            <li>
+              <a class="link link-line-anim" href="./portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li><a class="link link-line-anim" href="">Contacts</a></li>
           </ul>
         </nav>
         <!-- ===================================contacts -->
@@ -55,7 +63,7 @@
         <div class="container sect-one-container">
           <h1 class="one-title">Effective Solutions for Your Business</h1>
 
-          <button class="button-one btn-title" type="button">
+          <button class="button-one btn-title" data-modal-open type="button">
             Order Service
           </button>
         </div>
@@ -429,5 +437,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" data-modal-close class="modal-btn">
+          <svg class="modal-icon-close" width="24" height="24">
+            <use href="./images/close.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

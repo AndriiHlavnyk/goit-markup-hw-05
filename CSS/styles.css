@@ -11,6 +11,7 @@
   --grey: #2e2f42;
   --green: #31d0aa;
   --light-grey: #8e8f99;
+  --sim-white: #fcfcfc;
 }
 
 /* Шрифт s logo*/
@@ -107,6 +108,19 @@ ul {
   gap: 40px;
   padding-top: 24px;
   padding-bottom: 24px;
+}
+.link-line-anim {
+  position: relative;
+}
+.link-line-anim.current::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--ocean);
+  border-radius: 2px;
+  position: absolute;
+  margin-top: 21px;
 }
 
 /* contacts */
@@ -531,9 +545,13 @@ img {
 .products-item {
   width: calc((100% - 48px) / 3);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-  position: relative;
 }
-
+.products-item:hover .portfolio-img-text {
+  transform: translateY(0);
+}
+.products-item:focus .portfolio-img-text {
+  transform: translateY(0);
+}
 .products-list {
   border: 1px;
   border-style: solid;
@@ -547,7 +565,7 @@ img {
 }
 .h-product {
 }
-/* ===========overlay img portfolio============= */
+/* ===========animation img portfolio============= */
 
 .portfolio-img-text {
   color: var(--cloud);
@@ -557,4 +575,61 @@ img {
   line-height: 24px;
   background-color: var(--web-and-btn);
   padding: 40px 32px 164px;
+  transform: translateY(100%);
+  transition: transform 250ms linear;
+  overflow: auto;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms linear, visibility 250ms linear;
+}
+.modal {
+  position: absolute;
+  top: 88px;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  width: 408px;
+  min-height: 576px;
+  background-color: var(--sim-white);
+  border-radius: 4px;
+  padding: 24px;
+  transition: transform 250ms linear;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden .modal {
+  transform: translateX(-50%) scale(0);
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-btn {
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--cinderella);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  padding: 0;
+}
+.modal-btn:hover {
+  background-color: var(--ocean);
+}
+.modal-btn:focus {
+  background-color: var(--ocean);
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
