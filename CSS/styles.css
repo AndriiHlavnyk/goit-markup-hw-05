@@ -90,27 +90,31 @@ ul {
 }
 .link:hover {
   color: var(--web-and-btn);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link:focus {
   color: var(--web-and-btn);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link.current {
   color: var(--web-and-btn);
 }
 .link.current:hover {
   color: var(--web-and-btn);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link.current:focus {
   color: var(--web-and-btn);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .li-one {
   margin-left: 76px;
   gap: 40px;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 .link-line-anim {
   position: relative;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .link-line-anim.current::after {
   content: "";
@@ -120,7 +124,7 @@ ul {
   background-color: var(--ocean);
   border-radius: 2px;
   position: absolute;
-  margin-top: 21px;
+  bottom: -3px;
 }
 
 /* contacts */
@@ -139,9 +143,11 @@ ul {
 }
 .contact-link:hover {
   color: var(--web-and-btn);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-link:focus {
   color: var(--web-and-btn);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link,
 .contact-link {
@@ -205,11 +211,13 @@ ul {
 .button-one:hover {
   background-color: var(--ocean);
   color: var(--white);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-one:focus {
   background-color: var(--ocean);
   color: var(--white);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ============================================section-two */
 .section-two {
@@ -350,6 +358,7 @@ img {
 }
 .cards-soc-link:is(:hover, :focus) {
   background-color: var(--ocean);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .five-costumers-link {
 }
@@ -381,16 +390,11 @@ img {
 .five-link:is(:hover, :focus) {
   border-color: var(--ocean);
   color: var(--ocean);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .five-icon {
   fill: currentColor;
 }
-/* .five-link:is(:hover, :focus) {
-  border-color: var(--ocean);
-}
-.five-link:is(:hover, :focus) .five-icon {
-  fill: var(--ocean);
-} */
 
 /* ============================================Footer */
 .footer-all-div {
@@ -438,6 +442,7 @@ img {
 }
 .footer-soc-link:is(:hover, :focus) {
   background-color: var(--green);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-soc-icon {
   fill: var(--white);
@@ -481,6 +486,8 @@ img {
   color: var(--white);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-color: transparent;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.current:focus {
@@ -488,6 +495,7 @@ img {
   color: var(--white);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button {
   background-color: var(--milk-white);
@@ -506,6 +514,8 @@ img {
   color: var(--white);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-color: transparent;
 }
 
 .button:focus {
@@ -513,6 +523,7 @@ img {
   color: var(--white);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list {
   text-decoration: none;
@@ -529,10 +540,12 @@ img {
   display: block;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-img:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .img-portf {
 }
@@ -548,9 +561,11 @@ img {
 }
 .products-item:hover .portfolio-img-text {
   transform: translateY(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .products-item:focus .portfolio-img-text {
   transform: translateY(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .products-list {
   border: 1px;
@@ -576,9 +591,8 @@ img {
   background-color: var(--web-and-btn);
   padding: 40px 32px 164px;
   transform: translateY(100%);
-  transition: transform 250ms linear;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow: auto;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-img-wrap {
   position: relative;
@@ -621,15 +635,23 @@ img {
   justify-content: center;
   margin-left: auto;
   padding: 0;
+  cursor: pointer;
 }
 .modal-btn:hover {
+  fill: var(--white);
   background-color: var(--ocean);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn:focus {
+  fill: var(--white);
   background-color: var(--ocean);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
+/* .modal-icon-close:is(:hover, :focus) {
+  fill: var(--white);
+} */
